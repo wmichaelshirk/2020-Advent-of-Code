@@ -10,12 +10,24 @@ class UtilTests {
     @Test
     fun testReadInputAsString() {
         val testInputAsString = InputReader.getInputAsString(1)
-        assertThat(testInputAsString, `is`("this\nis\na\ntest input\nfile\n"))
+        assertThat(
+            testInputAsString, `is`(
+                """
+            1721
+            979
+            366
+            299
+            675
+            1456
+            
+        """.trimIndent()
+            )
+        )
     }
 
     @Test
     fun testReadInputAsList() {
         val testInputAsList = InputReader.getInputAsList(1)
-        assertThat(testInputAsList, contains("this", "is", "a", "test input", "file"))
+        assertThat(testInputAsList, contains("1721", "979", "366", "299", "675", "1456"))
     }
 }

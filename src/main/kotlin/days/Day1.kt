@@ -7,7 +7,7 @@ class Day1 : Day(1) {
     //
     //    Specifically, they need you to find the two entries that sum to 2020 and then multiply
     //    those two numbers together.
-    override fun partOne(): Any {
+    override fun partOne(): Int? {
         val entries = inputList.map { it.toInt() }
 
         for (v1 in entries) {
@@ -17,7 +17,7 @@ class Day1 : Day(1) {
                 }
             }
         }
-        return 0
+        return null
     }
 
     //    The Elves in accounting are thankful for your help; one of them even offers you a
@@ -28,7 +28,7 @@ class Day1 : Day(1) {
     //    675. Multiplying them together produces the answer, 241861950.
     //
     //    In your expense report, what is the product of the three entries that sum to 2020?
-    override fun partTwo(): Any {
+    override fun partTwo(): Int? {
         val entries = inputList.map { it.toInt() }
 
         for (v1 in entries) {
@@ -40,6 +40,6 @@ class Day1 : Day(1) {
                 }
             }
         }
-        return 0
+        return null
     }
 }

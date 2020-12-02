@@ -55,8 +55,11 @@ object Runner {
         printParts(partOne, partTwo)
     }
 
-    private fun printParts(partOne: TimedValue<Any>, partTwo: TimedValue<Any>) {
-        val padding = max(partOne.value.toString().length, partTwo.value.toString().length) + 14        // 14 is 8 (length of 'Part 1: ') + 6 more
+    private fun printParts(partOne: TimedValue<Any?>, partTwo: TimedValue<Any?>) {
+        val padding = max(
+            partOne.value.toString().length,
+            partTwo.value.toString().length
+        ) + 14        // 14 is 8 (length of 'Part 1: ') + 6 more
         println("Part 1: ${partOne.value}".padEnd(padding, ' ') + "(${partOne.duration})")
         println("Part 2: ${partTwo.value}".padEnd(padding, ' ') + "(${partTwo.duration})")
     }
