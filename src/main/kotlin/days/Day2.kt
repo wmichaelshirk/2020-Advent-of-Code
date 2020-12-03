@@ -27,4 +27,3 @@ class Day2 : Day(2) {
     }
 
 }
-// 438 too high
