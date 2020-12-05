@@ -6,3 +6,8 @@ out/
 # Gradle
 .gradle
 build/
+
+# Clojure
+.calva/
+.cpcache/
+.nrepl-port
