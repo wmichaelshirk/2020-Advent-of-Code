@@ -20,12 +20,20 @@
 (defn find-entries []
   (let [numbers (read-numbers "./src/main/resources/input_day_1.txt")]
     (for [a numbers
+          :let [b (- 2020 a)]
+          :when (< a b )
+          :when (contains? numbers b)]
+      (* a b))))
+
+(defn find-entries2 []
+  (let [numbers (read-numbers "./src/main/resources/input_day_1.txt")]
+    (for [a numbers
           b numbers
           :let [c (- 2020 a b)]
           :when (< a b c)
           :when (contains? numbers c)]
       (* a b c))))
 
-
-(defn run [opts]
-  (println (find-entries)))
+(defn run [_]
+  (println "Part 1: " (find-entries))
+  (println "Part 2: " (find-entries2)))
