@@ -10,11 +10,11 @@ class Day12Test {
 
     @Test
     fun testPartOne() {
-        MatcherAssert.assertThat(dayTwelve.partOne(), `is`(5))
+        MatcherAssert.assertThat(dayTwelve.partOne(), `is`(25))
     }
 
     @Test
     fun testPartTwo() {
-        MatcherAssert.assertThat(dayTwelve.partTwo(), `is`(8))
+        MatcherAssert.assertThat(dayTwelve.partTwo(), `is`(286))
     }
 }
